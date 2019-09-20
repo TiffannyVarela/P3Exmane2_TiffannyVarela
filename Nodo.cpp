@@ -15,25 +15,25 @@ class Nodo{
 		Nodo(){
 		}
 		
-		Nodo(string value){
-			this->value=value;
-			this->next=NULL;
+		Nodo(string value_){
+			value=value_;
+			next=NULL;
 		}
 		
 		string getValue(){
-			return this->value;
+			return value;
 		}
 		
-		void setValue(string value){
-			this->value.assign(value);
+		void setValue(string value_){
+			value.assign(value_);
 		}
 		
 		Nodo* getNext(){
-			return this->next;
+			return next;
 		}
 		
-		void setNext(Nodo* next){
-			this->next=next;
+		void setNext(Nodo* next_){
+			next=next_;
 		}
 		
 		~Nodo(){

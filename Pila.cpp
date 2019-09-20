@@ -12,10 +12,11 @@ class Pila{
 		
 	public:
 		Pila(){
+			head=NULL;
 		}
 		
-		Pila(Nodo* head){
-			this->head=head;
+		Pila(Nodo* head_){
+			head=head_;
 		}
 		
 		void push(string value){
@@ -26,7 +27,7 @@ class Pila{
 		
 		Nodo* pop(){
 			Nodo* temp = head;
-			head->getNext();
+			head=head->getNext();
 			return temp;
 		}
 		
@@ -35,12 +36,7 @@ class Pila{
 		}
 		
 		bool isEmpty(){
-			if(head->getNext()==NULL){
-				return true;
-			}
-			else{
-				return false;
-			}
+			return head==NULL;
 		}
 		
 		~Pila(){
